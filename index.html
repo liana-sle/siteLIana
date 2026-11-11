@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Лиана Слепуха — модель. Портфолио, съёмки, показы. Моделинг с 13 лет.">
+<meta name="author" content="Лиана Слепуха">
+<title>Лиана Слепуха — Модель | Портфолио</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f7f3ee;
+    --beige:#e8ded1;
+    --pudra:#d8b4a0;
+    --brown:#4a3b32;
+    --gold:#b08d57;
+    --text:#3d332c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.7;
+    font-weight:300;
+  }
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--brown);}
+
+  /* ---------- Шапка ---------- */
+  header{
+    background:linear-gradient(rgba(74,59,50,.55),rgba(74,59,50,.55)),
+               url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600') center/cover no-repeat;
+    height:90vh;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;color:#fff;padding:20px;
+  }
+  header h1{
+    font-size:clamp(2.5rem,7vw,5rem);
+    color:#fff;letter-spacing:2px;font-weight:300;
+  }
+  header p{
+    font-size:1.1rem;letter-spacing:4px;text-transform:uppercase;
+    margin-top:15px;color:var(--beige);
+  }
+  header .line{
+    width:80px;height:1px;background:var(--pudra);margin:25px auto;
+  }
+
+  /* ---------- Навигация ---------- */
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:rgba(247,243,238,.95);
+    backdrop-filter:blur(6px);
+    display:flex;justify-content:center;gap:35px;
+    padding:18px;border-bottom:1px solid var(--beige);
+  }
+  nav a{
+    text-decoration:none;color:var(--brown);
+    font-size:.85rem;letter-spacing:2px;text-transform:uppercase;
+    transition:.3s;
+  }
+  nav a:hover{color:var(--gold);}
+
+  /* ---------- Секции ---------- */
+  section{max-width:1000px;margin:0 auto;padding:90px 25px;}
+  section h2{
+    font-size:2.4rem;margin-bottom:30px;text-align:center;
+  }
+  section h2::after{
+    content:"";display:block;width:60px;height:1px;
+    background:var(--gold);margin:18px auto 0;
+  }
+
+  /* ---------- Обо мне ---------- */
+  .about{display:flex;gap:50px;align-items:center;flex-wrap:wrap;}
+  .about img{
+    width:340px;max-width:100%;border-radius:4px;
+    box-shadow:20px 20px 0 var(--beige);
+    float:left;margin:0 30px 20px 0;
+  }
+  .about-text{flex:1;min-width:280px;text-align:justify;}
+  .about-text p{margin-bottom:18px;}
+  .about-text .highlight{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.4rem;font-style:italic;color:var(--gold);
+    border-left:2px solid var(--pudra);padding-left:20px;
+    margin:25px 0;
+  }
+
+  /* ---------- Статистика ---------- */
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:30px;text-align:center;margin-top:40px;
+  }
+  .stats div{background:#fff;padding:35px 15px;border-radius:4px;box-shadow:0 8px 30px rgba(74,59,50,.07);}
+  .stats span{font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--gold);display:block;}
+  .stats small{text-transform:uppercase;letter-spacing:2px;font-size:.75rem;color:var(--brown);}
+
+  /* ---------- Списки ---------- */
+  .skills{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;}
+  .skills ul{list-style:none;min-width:240px;}
+  .skills li{padding:10px 0 10px 28px;position:relative;border-bottom:1px dashed var(--beige);}
+  .skills li::before{content:"✦";position:absolute;left:0;color:var(--gold);}
+
+  /* ---------- Кнопки-скрипты ---------- */
+  .js-box{background:#fff;padding:35px;border-radius:6px;
+          box-shadow:0 8px 30px rgba(74,59,50,.07);text-align:center;}
+  .js-box p{text-transform:uppercase;letter-spacing:2px;font-size:.8rem;margin-bottom:20px;color:var(--brown);}
+  .btn{
+    font-family:'Montserrat',sans-serif;cursor:pointer;
+    background:transparent;border:1px solid var(--gold);color:var(--brown);
+    padding:12px 28px;margin:8px;font-size:.8rem;letter-spacing:2px;
+    text-transform:uppercase;transition:.35s;border-radius:2px;
+  }
+  .btn:hover{background:var(--gold);color:#fff;}
+
+  /* ---------- Футер ---------- */
+  footer{
+    background:var(--brown);color:var(--beige);text-align:center;
+    padding:50px 20px;margin-top:60px;
+  }
+  footer a{color:var(--pudra);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  footer .social{margin:20px 0;font-size:.9rem;letter-spacing:1px;}
+
+  @media(max-width:600px){
+    header{height:70vh;}
+    .about img{float:none;margin:0 0 25px;display:block;box-shadow:12px 12px 0 var(--beige);}
+    .about{text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ======= ШАПКА ======= -->
+<header>
+  <h1>Лиана Слепуха</h1>
+  <div class="line"></div>
+  <p>Модель · Портфолио</p>
+</header>
+
+<!-- ======= НАВИГАЦИЯ (внутренние якоря) ======= -->
+<nav>
+  <a href="#about">Обо мне</a>
+  <a href="#skills">Навыки</a>
+  <a href="page2.html">Портфолио</a>
+  <a href="page3.html">Контакты</a>
+</nav>
+
+<!-- ======= ОБО МНЕ ======= -->
+<section id="about">
+  <h2>Обо мне</h2>
+  <div class="about">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600"
+         alt="Лиана Слепуха — модель">
+    <div class="about-text">
+      <p>Меня зовут <strong>Лиана Слепуха</strong>, и моделинг — это не просто работа, а язык, на котором я говорю с миром с <strong>13 лет</strong>.</p>
+      <p>За эти годы я прошла путь от первых робких проб перед камерой до уверенных выходов на подиум и съёмок, где каждый кадр — маленькая история. Мне близка эстетика естественности: свет, фактура ткани, взгляд — всё то, что нельзя сыграть, но можно почувствовать.</p>
+      <blockquote class="highlight">«Модель — это не про идеальные черты, а про умение прожить мгновение перед объективом».</blockquote>
+      <p>В моём портфолио — рекламные кампании, fashion-съёмки, показы коллекций молодых дизайнеров и участие в творческих проектах. Я продолжаю учиться, пробовать новые образы и находить красоту в деталях.</p>
+    </div>
+  </div>
+
+  <!-- Статистика -->
+  <div class="stats">
+    <div><span>7+</span><small>лет в моделингe</small></div>
+    <div><span>50+</span><small>съёмок и проектов</small></div>
+    <div><span>20+</span><small>показов</small></div>
+    <div><span>13</span><small>лет — начало пути</small></div>
+  </div>
+</section>
+
+<!-- ======= НАВЫКИ (СПИСКИ) ======= -->
+<section id="skills">
+  <h2>Что я умею</h2>
+  <div class="skills">
+    <ul>
+      <li>Позирование перед камерой</li>
+      <li>Работа на подиуме</li>
+      <li>Дефиле и пластика</li>
+      <li>Работа в кадре с реквизитом</li>
+    </ul>
+    <ul>
+      <li>Быстрая адаптация к образу</li>
+      <li>Работа в команде</li>
+      <li>Дисциплина и пунктуальность</li>
+      <li>Английский (базовый)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======= ИНТЕРАКТИВ (JS-СКРИПТЫ) ======= -->
+<section id="interact">
+  <h2>Немного интерактива</h2>
+  <div class="js-box">
+    <p>Скрипт 1 · Изменение фона страницы</p>
+    <button class="btn" onclick="document.body.style.backgroundColor='#f7f3ee'">Светлый</button>
+    <button class="btn" onclick="document.body.style.backgroundColor='#e8ded1'">Бежевый</button>
+    <button class="btn" onclick="document.body.style.backgroundColor='#d8b4a0'">Пудровый</button>
+  </div>
+
+  <div class="js-box" style="margin-top:25px;">
+    <p>Скрипт 2 · Текущая дата и время</p>
+    <button class="btn" onclick="alert(new Date().toLocaleString('ru-RU'))">Показать дату</button>
+  </div>
+
+  <div class="js-box" style="margin-top:25px;">
+    <p>Скрипт 3 · Удалить цифры из предложения</p>
+    <button class="btn" onclick="let s = prompt('Введите предложение с цифрами:'); if(s) alert(s.replace(/[0-9]/g, ''));">Удалить цифры</button>
+  </div>
+</section>
+
+<!-- ======= ФУТЕР ======= -->
+<footer>
+  <h2 style="color:var(--beige);">Связаться со мной</h2>
+  <p class="social">
+    <a href="mailto:slepukhalr@mail.ru">Email</a>
+  </p>
+  <p style="font-size:.8rem;opacity:.7;">© 2026 Лиана Слепуха · Все права защищены</p>
+</footer>
+
+</body>
+</html>

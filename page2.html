@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Портфолио Лианы Слепухи — галерея съёмок, показов и творческих проектов.">
+<meta name="author" content="Лиана Слепуха">
+<title>Портфолио — Лиана Слепуха</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f7f3ee;
+    --beige:#e8ded1;
+    --pudra:#d8b4a0;
+    --brown:#4a3b32;
+    --gold:#b08d57;
+    --text:#3d332c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.7;
+    font-weight:300;
+  }
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--brown);}
+
+  /* ---------- Шапка ---------- */
+  header{
+    background:linear-gradient(rgba(74,59,50,.6),rgba(74,59,50,.6)),
+               url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1600') center/cover no-repeat;
+    height:55vh;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;color:#fff;padding:20px;
+  }
+  header h1{font-size:clamp(2.2rem,6vw,4rem);color:#fff;letter-spacing:2px;font-weight:300;}
+  header p{font-size:1rem;letter-spacing:4px;text-transform:uppercase;margin-top:15px;color:var(--beige);}
+  header .line{width:80px;height:1px;background:var(--pudra);margin:25px auto;}
+
+  /* ---------- Навигация ---------- */
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:rgba(247,243,238,.95);
+    backdrop-filter:blur(6px);
+    display:flex;justify-content:center;gap:35px;
+    padding:18px;border-bottom:1px solid var(--beige);
+  }
+  nav a{
+    text-decoration:none;color:var(--brown);
+    font-size:.85rem;letter-spacing:2px;text-transform:uppercase;
+    transition:.3s;
+  }
+  nav a:hover{color:var(--gold);}
+
+  /* ---------- Секции ---------- */
+  section{max-width:1150px;margin:0 auto;padding:80px 25px;}
+  section h2{font-size:2.4rem;margin-bottom:15px;text-align:center;}
+  section h2::after{content:"";display:block;width:60px;height:1px;background:var(--gold);margin:18px auto 0;}
+  .subtitle{text-align:center;font-style:italic;font-family:'Cormorant Garamond',serif;
+            font-size:1.2rem;color:var(--gold);margin-bottom:45px;}
+
+  /* ---------- Галерея ---------- */
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:20px;
+  }
+  .card{
+    position:relative;overflow:hidden;border-radius:4px;
+    box-shadow:0 8px 30px rgba(74,59,50,.1);
+    background:#fff;
+    transition:transform .4s, box-shadow .4s;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(74,59,50,.18);}
+  .card img{
+    width:100%;height:360px;object-fit:cover;display:block;
+    transition:transform .6s ease, filter .4s;
+    filter:saturate(.95);
+  }
+  .card:hover img{transform:scale(1.06);filter:saturate(1.1);}
+
+  /* ---------- Цитата ---------- */
+  .quote{
+    text-align:center;max-width:700px;margin:70px auto 0;
+    font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;
+    color:var(--brown);border-top:1px solid var(--beige);border-bottom:1px solid var(--beige);
+    padding:35px 20px;
+  }
+  .quote span{color:var(--gold);}
+
+  /* ---------- Футер ---------- */
+  footer{background:var(--brown);color:var(--beige);text-align:center;padding:50px 20px;margin-top:60px;}
+  footer a{color:var(--pudra);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  footer .social{margin:20px 0;font-size:.9rem;letter-spacing:1px;}
+
+  @media(max-width:600px){
+    header{height:45vh;}
+    .card img{height:300px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ======= ШАПКА ======= -->
+<header>
+  <h1>Портфолио</h1>
+  <div class="line"></div>
+  <p>Лиана Слепуха · Модель</p>
+</header>
+
+<!-- ======= НАВИГАЦИЯ ======= -->
+<nav>
+  <a href="index.html">Главная</a>
+  <a href="#gallery">Галерея</a>
+  <a href="page3.html">Контакты</a>
+</nav>
+
+<!-- ======= ГАЛЕРЕЯ ======= -->
+<section id="gallery">
+  <h2>Избранные работы</h2>
+  <p class="subtitle">«Каждый кадр — отдельная история»</p>
+
+  <div class="gallery">
+
+    <div class="card">
+      <img src="images/photo1.jpg" alt="Fashion-съёмка">
+    </div>
+
+    <div class="card">
+      <img src="images/photo2.jpg" alt="Подиум">
+    </div>
+
+    <div class="card">
+      <img src="images/photo3.jpg" alt="Арт-проект">
+    </div>
+
+    <div class="card">
+      <img src="images/photo4.jpg" alt="Портрет">
+    </div>
+
+    <div class="card">
+      <img src="images/photo5.jpg" alt="Показ коллекции">
+    </div>
+
+    <div class="card">
+      <img src="images/photo6.jpg" alt="Арт-проект">
+    </div>
+
+    <div class="card">
+      <img src="images/photo7.jpg" alt="Рекламная съёмка">
+    </div>
+
+    <div class="card">
+      <img src="images/photo8.jpg" alt="Подиум">
+    </div>
+
+    <div class="card">
+      <img src="images/photo9.jpg" alt="Арт-проект">
+    </div>
+
+    <div class="card">
+      <img src="images/photo10.jpg" alt="Портфолио">
+    </div>
+
+  </div>
+
+  <div class="quote">
+    «Мода проходит, стиль остаётся. Я ищу <span>свой</span> стиль в каждом кадре».
+  </div>
+</section>
+
+<!-- ======= ФУТЕР ======= -->
+<footer>
+  <h2 style="color:var(--beige);">Связаться со мной</h2>
+  <p class="social">
+    <a href="mailto:slepukhalr@mail.ru">Email</a>
+  </p>
+  <p style="font-size:.8rem;opacity:.7;">© 2026 Лиана Слепуха · Все права защищены</p>
+</footer>
+
+</body>
+</html>
